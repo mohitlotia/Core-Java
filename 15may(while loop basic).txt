@@ -1,0 +1,186 @@
+3)1---->100 even numbers print 
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1;
+         while(a<=100){
+         if(a%2==0){
+          System.out.print(a);
+           }
+           System.out.print(" ");
+       a++;
+   }
+ }
+
+    
+}
+
+--------------------------------------------
+4) 100--->1 even number 
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=100;
+         while(a>=1){
+         if(a%2==0){
+          System.out.print(a);
+           }
+           System.out.print(" ");
+       a--;
+   }
+ }
+
+    
+}
+
+-------------------------------------------------
+5)1---->100 odd numbers 
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1;
+         while(a<=100){
+         if(a%2==1){
+          System.out.print(a);
+           }
+           System.out.print(" ");
+       a++;
+   }
+ }
+
+}
+--------------------------------------------------
+8)50--->1000 even number 
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=50;
+         while(a<=1000){
+         if(a%2==0){
+          System.out.print(a);
+           }
+           System.out.print(" ");
+       a++;
+   }
+ }
+
+    
+}
+---------------------------------------------
+12)1--->10 sum (addition) 
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1; 
+	   int sum=0;
+        while(a<=10){
+              sum=sum+a;
+         System.out.print(sum+" ");
+          a++;
+        }
+         
+    }
+}
+------------------------------------------- 
+14)user input table 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Scanner = new Scanner(System.in);
+	    System.out.print("enter the number and print table : ");
+	    int i = Scanner.nextInt();
+	   int a=1; 
+	   int sum;
+        while(a<=10){
+        sum=a*i;
+        System.out.println(sum);
+          a++;
+        }
+         
+    }
+}
+-------------------------------------------------------
+16)1-->100 (7 and 3 k multiple se divisible ho)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1;
+         while(a<=100){
+         if(a%3==0 && a%7==0 || a*3==0 && a*7==0){
+          System.out.print(a+" ");
+           }
+       a++;
+   }
+ }
+}
+---------------------------------------------------
+17) divide number both 5 and 11 (1---->100)
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1;
+         while(a<=100){
+         if(a%5==0 && a%11==0){
+          System.out.print(a+" ");
+           }
+       a++;
+   }
+ }
+}
+--------------------------------------------------------
+18)100----1 (5 or 11)
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=100;
+         while(a>=1){
+         if(a%5==0 && a%11==0){
+          System.out.print(a+" ");
+           }
+       a--;
+   }
+ }
+} 
+-------------------------------------------------------------------------
+22)
+1--->100 even number sum 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1;
+	   int sum=0;
+         while(a<=100){
+         if(a%2==0){
+             sum=sum+a;
+          System.out.print(sum +" ");
+           }
+       a++;
+   }
+ }
+  }
+------------------
+23)
+1---->100 odd number ka sum 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int a=1;
+	   int sum=0;
+         while(a<=100){
+         if(a%2==1){
+             sum=sum+a;
+          System.out.print(sum +" ");
+           }
+       a++;
+   }
+ }
+
+    
+}

@@ -1,0 +1,185 @@
+1)
+
+XYZ Technologies is in the process of increment the salary of the employees. This
+increment is done based on their salary and their performance appraisal rating.
+If the appraisal rating is between 1 and 3, the increment is 10% of the salary.
+If the appraisal rating is between 3.1 and 4, the increment is 25% of the salary.
+If the appraisal rating is between 4.1 and 5, the increment is 30% of the salary.
+Help them to do this, by writing a program that displays the incremented salary. Write a
+class “IncrementCalculation.java” and write the main method in it.
+Note : If either the salary is 0 or negative (or) if the appraisal rating is not in the range 1 to
+5 (inclusive), then the output should be “Invalid Input”.
+Sample Input 1 :
+Enter the salary
+8000
+Enter the Performance appraisal rating
+3
+Sample Output 1 :
+8800
+Sample Input 2 :
+Enter the salary
+7500
+Enter the Performance appraisal rating
+4.3
+Sample Output 2 :
+9750
+Sample Input 3 :
+Enter the salary
+-5000
+Enter the Performance appraisal rating
+6
+Sample Output 3 :
+Invalid Input
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your monthly salary: ");
+        double salary = scanner.nextDouble();
+
+        System.out.print("Enter the performance appraisal rating(1-5) : ");
+        double rating = scanner.nextDouble();
+
+        double incrementedsalary = 0;
+        double final_salary = 0;
+
+
+         if(rating >= 1 && rating <= 3){
+            incrementedsalary = salary * 0.10;//10%
+        }
+        else if(rating >= 3.1 && rating <= 4){
+            incrementedsalary = salary * 0.25; //25%
+        }
+        else if(rating >= 4.1 && rating <= 5){
+            incrementedsalary = salary * 0.30; //30%
+        }
+        else{
+             System.out.println("invalid rating");
+         }
+             final_salary = incrementedsalary + salary;
+        // Output the results
+        System.out.println("Original Salary: " + salary);
+        System.out.println("Performance appraisal rating: " + rating);
+        System.out.println("Incrementedsalary : " + incrementedsalary);
+        System.out.println("Final salary : " + final_salary);
+
+    }
+}
+
+---------------------------------------------------------------------------------------------------------
+2)Problem Statement – Goutam and Tanul plays by telling numbers. Goutam says a number
+to Tanul. Tanul should first reverse the number and check if it is same as the original. If yes,
+Tanul should say “Palindrome”. If not, he should say “Not a Palindrome”. If the number is
+negative, print “Invalid Input”. Help Tanul by writing a program.
+Sample Input 1 :
+21212
+Sample Output 1 :
+Palindrome
+Sample Input 2 :
+6186
+Sample Output 2 :
+Not a Palindrome
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number: ");
+        int num = scanner.nextInt();
+
+        int temp,rem,sum=0;
+
+        temp = num;
+        for(int i=num;num>0;){
+            rem = num%10;
+            sum=sum*10+rem;
+            num = num/10;
+
+        }
+
+        if(sum==temp){
+            System.out.println("pallindrome");
+        }else{
+            System.out.println("Not a Palindrome");
+        }
+
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+3)
+In a theater, there is a discount scheme announced where one gets a 10% discount
+on the total cost of tickets when there is a bulk booking of more than 20 tickets, and
+a discount of 2% on the total cost of tickets if a special coupon card is submitted.
+Develop a program to find the total cost as per the scheme. The cost of the k class
+ticket is Rs.75 and q class is Rs.150. Refreshments can also be opted by paying an
+additional of Rs. 50 per member.
+Hint: k and q and You have to book minimum of 5 tickets and maximum of 40 at a
+time. If fails display “Minimum of 5 and Maximum of 40 Tickets”. If circle is given a
+value other than ‘k’ or ‘q’ the output should be “Invalid Input”.
+The ticket cost should be printed exactly to two decimal places.
+Sample Input 1:
+Enter the no of ticket:35
+Do you want refreshment:y
+Do you have coupon code:y
+Enter the circle:k
+Sample Output 1:
+Ticket cost:4065.25
+Sample Input 2:
+Enter the no of ticket:1
+Sample Output 2:
+Minimum of 5 and Maximum of 40 Tickets
+
+import java.util.*;
+class Pappu {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter the no of ticket :");
+        int ticket = scn.nextInt();
+        if (ticket >= 5 && ticket <= 40) {
+
+            System.out.print("do you have refreshment :");
+            char refreshment = scn.next().charAt(0);
+            System.out.print("do you have coupon code :");
+            char coupon = scn.next().charAt(0);
+            System.out.print("Enter the circle :");
+            char circle = scn.next().charAt(0);
+
+            double ticketCost = 0;
+            if (circle == 'k') {
+                ticketCost = ticket * 75;
+                if (ticket > 20) {
+                    ticketCost = ticketCost - ticketCost * 0.10; // 10% discount
+                      if (coupon == 'y') {
+                        ticketCost = ticketCost - ticketCost * 0.02; // 2%  discount
+                           if (refreshment == 'y') {
+                              ticketCost = ticketCost + ticket * 50; // Add refreshment cost
+                          }
+                    }
+                }
+                System.out.println(ticketCost);
+            } else if (circle == 'q') {
+                ticketCost = ticket * 150;
+                if (ticket > 20) {
+                    ticketCost = ticketCost - ticketCost * 0.10; // 10% discount
+                     if (coupon == 'y') {
+                        ticketCost = ticketCost - ticketCost * 0.02; // 2%  discount
+                          if (refreshment == 'y') {
+                             ticketCost = ticketCost + ticket * 50; // Add refreshment cost
+                         }
+                    }
+                }
+                System.out.println(ticketCost);
+            }
+            else {
+                System.out.println("Invalid Input");
+            }
+        }
+        else {
+        System.out.println("Minimum of 5 and Maximum of 40 Tickets");
+        }
+    }
+}
