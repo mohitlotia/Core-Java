@@ -1,0 +1,367 @@
+switch paractice questions : 
+************************************
+user input 
+constant 
+************************************
+1)write a program to read a week day number and print weekday name using switch 
+eg 1 =>sunday 
+1 sunday 
+
+import java.util.*;
+public class Weekdays
+{
+
+	public static void main(String[] args) {
+		Scanner Scanner = new Scanner(System.in);
+		System.out.println("Enter the number : ");
+		int day = Scanner.nextInt();
+		
+      switch (day) {
+            case 1:
+                System.out.println("Sunday");
+                break;
+            case 2:
+                System.out.println("Monday");
+                break;
+            case 3:
+                System.out.println("Tuesday");
+                break;
+            case 4:
+                System.out.println("Wednesday");
+                break;
+            case 5:
+                System.out.println("Thursday");
+                break;
+            case 6:
+                System.out.println("Friday");
+                break;
+            case 7:
+                System.out.println("Saturday");
+                break;
+            default:
+                System.out.println("Invalid number. Please enter a number between 1 and 7.");
+                break;
+        }
+        
+}        
+-----------------------------------------------------------------------
+2) 
+write a program to read gender (M/F) and print the corresponding gender using a switch statement 
+
+import java.util.*;
+public class Gender
+{
+
+	public static void main(String[] args) {
+		Scanner Scanner = new Scanner(System.in);
+		System.out.println("Choose charactor m/f and check gender : ");
+		char gender = Scanner.next().charAt(0);
+		
+      switch (gender) {
+            case 'm':
+                System.out.println("male");
+                break;
+            case 'M':
+                System.out.println("Male");
+                break;
+            case 'f':
+                System.out.println("female");
+                break;
+            case 'F':
+                System.out.println("Female");
+                break;
+            default:
+                System.out.println("Invalid number. Please Choose charactor  between m and f.");
+                break;
+        }
+        
+    }   
+    
+}     
+--------------------------------------------------------------------------------------------------
+4) 
+write a program to create a simple calculator 
+a b + 
+a+b 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("choose Character a/s/m/d/M");
+	char x = scanner.next().charAt(0);
+	
+	System.out.println("Enter the value of a");
+                int a = scanner.nextInt();
+                 System.out.println("Enter the value of b");
+                int b = scanner.nextInt();
+                int result;
+	switch (x) {
+            case 'a':
+                 result=a+b;
+                System.out.println(result);
+                break;
+            case 's':
+                 result=a-b;
+                System.out.println(result);
+                break;
+            case 'm':
+                 result=a*b;
+               System.out.println(result);
+                break;
+            case 'd':
+                 result=a/b;
+                System.out.println(result);
+                break;
+            case 'M':
+                 result=a%b;
+                System.out.println(result);
+                break;
+            default:
+                System.out.println("Invalid number. Please enter a Character between(a/s/m/d/M).");
+                break;
+            }
+        }
+    }
+-----------------------------------------------------------------------------
+5) 
+write a program to check whether a person is eligible or not for vote 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+
+	        System.out.println("Enter the age");
+                int age = scanner.nextInt();
+                if(age<=18){
+                    System.out.println("valid for vote");
+                }
+                else {
+                   System.out.println(" not valid for vote"); 
+                }
+                
+
+        }
+    }
+
+
+----------------------------------------------------------------------------------------------------
+6)
+write a program to check month ? 
+12 month 
+import java.util.*;
+public class Main
+{
+
+	public static void main(String[] args) {
+		Scanner Scanner = new Scanner(System.in);
+		System.out.println("Enter the number : ");
+		int day = Scanner.nextInt();
+		
+      switch (day) {
+            case 1:
+                System.out.println("janurary");
+                break;
+            case 2:
+                System.out.println("february");
+                break;
+            case 3:
+                System.out.println("march");
+                break;
+            case 4:
+                System.out.println("april");
+                break;
+            case 5:
+                System.out.println("may");
+                break;
+            case 6:
+                System.out.println("jun");
+                break;
+            case 7:
+                System.out.println("july");
+                break;
+            case 8:
+                System.out.println("Auguest");
+                break;
+            case 9:
+                System.out.println("September");
+                break;
+            case 10:
+                System.out.println("octaber");
+                break;
+            case 11:
+                System.out.println("november");
+                break;
+            case 12:
+                System.out.println("December");
+                break;
+            default:
+                System.out.println("Invalid number. Please enter a number between 1 and 12.");
+             break;
+          
+            }   
+        }
+        
+}        
+
+--------------------------------------------------------------------------------------------------
+7)
+a p e o f r l 
+a=armstrong number 
+p =prime number 
+e =even 
+o =odd 
+f =factorial 
+r =reverse 
+l =fibonacci 
+t =perfect number 
+n =neon number 
+w =leap year 
+s =swap one way 
+v =vowel and consonant 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner Scanner = new Scanner(System.in);
+	System.out.println("choose Character a,p,e,f,r,F,,n,l,s,v");
+		char a = Scanner.next().charAt(0);
+	
+
+	     System.out.print("Enter the value of b: ");
+         int b = Scanner.nextInt();
+        
+        int tem, rem, sum=0;
+	    tem=b;
+	
+	switch (a) {
+            case 'a':
+               // a=armstrong number 
+                   int temp = b;
+                   for (int i=b;i>0;i--) {
+                   rem = b % 10;
+                   sum=sum+rem*rem*rem;
+                   b=b/10;
+                }
+                   if (temp==sum){
+                  System.out.println("number is Armstrong."+ sum);
+                   } 
+                   else {
+                   System.out.println("Not Armstrong.");
+                   }
+
+                break;
+            case 'p':
+                //p =prime number 
+                int count=0;
+                for(int i=2;i<=b;i++){
+                if(b%i==0){
+                    count++;
+                  }
+                }
+                if(count==0 || count==1){
+                    System.out.println("prime number");
+                }
+                else {
+                    System.out.println(" not prime number");
+                }
+                break;
+            case 'e':
+               if (b%2==0){
+                   System.out.println("even");
+               }
+               else {
+                   System.out.println("odd");
+               }
+                break;
+            case 'f':
+                int fact=1;
+                for(int i=1;i<=b;i++){
+                fact=fact*i;
+                System.out.println(fact);
+                }
+                break;
+            case 'r':
+                 for(int i=b;b>0;){
+                 rem = b%10;
+                 sum=sum*10+rem;
+                 b=b/10;
+                }
+                System.out.println(sum);
+                break;
+            case 'F':
+                int n1=0,n2=1,n3;
+                System.out.println(n1);
+                System.out.println(n2);
+                for(int i=1;i<=b;i++){
+                n3=n1+n2;
+                System.out.println(n3);
+                n1=n2;
+                n2=n3;
+               }
+                break;
+            case 'n':
+               int sq = b*b;
+               while (sq>0){
+                   rem = sq%10;
+                   sum = sum + rem;
+                   sq = sq/10;
+               }
+               if(b==sum){
+                   System.out.println("neon number");
+               }
+               else {
+                   System.out.println("not a neon number");
+               }
+                break;
+            case 'l':
+                //l =leap year 
+                System.out.println("Enter the year");
+		        int year = Scanner.nextInt();
+		        if(year%4==0 || year%100==0 || year%400==0){
+		        System.out.println("leap year");
+                }
+                else {
+                  System.out.println("not a leap year");
+                }
+                break;
+            case 's':
+                 System.out.print("Enter the first number: ");
+                 int x = Scanner.nextInt();
+                 System.out.print("Enter the second number: ");
+                 int y = Scanner.nextInt();
+
+                 System.out.println("Before swapping: x = " + x + ", y = " + y);
+
+                if (true) {
+                  x = x + y;
+                  y = x - y;
+                  x = x - y;
+                }
+
+                System.out.println("After swapping: a = " + a + ", y = " + y);
+                break;    
+            case 'v':
+                //v =vowel and consonant 
+                System.out.println("Enter the character to check vowel and consonant");
+	         	char z = Scanner.next().charAt(0);
+		
+                if(z =='a' || z == 'e' || z == 'i' || z == 'o' || z == 'u'){
+		         System.out.println("vowel");
+	         	}
+		        else {
+		         System.out.println("consonant");
+		        }
+                break;
+            default:
+                System.out.println("Invalid number. Please enter a C between a,p,e,f,r,F,n,l,s,v");
+                break;
+          
+            }   
+
+	}
+}
+
+THE END---------------------------------------------------------------------------------------------------------
