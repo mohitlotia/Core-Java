@@ -1,0 +1,167 @@
+6)
+1 6 11 16 21
+2 7 12 17 22
+3 8 13 18 23
+4 9 14 19 24
+5 10 15 20 25
+
+#include <stdio.h>
+
+int main()
+{
+    int sum;
+    for(int i=1;i<=5;i++){
+        sum=i;
+     for(int j=1;j<=5;j++){
+        
+            System.out.println(sum);
+             sum=sum+5;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+---------------------------------------------------------
+*******
+*           *
+*******
+*          *
+*         *
+
+#include <stdio.h>
+
+int main()
+{
+    
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=7;j++){
+            if(i==1 || i==3 || j==1 || j==7 ){
+                printf("*");
+            }
+            else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+---------------------------------------------------
+Question 6: Temperature Converter
+Write a Java program to convert temperatures between Celsius and Fahrenheit. The program should ask the user for the input temperature and the unit (C or F) and provide the converted temperature.
+
+import java.util.*;
+public class Tempreatures
+{
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Check tempreatures choose C&F");
+		char temp = scanner.next().charAt(0);
+		if(temp=='c'){
+		    
+        System.out.println("Enter Manu temperature Fahrenheit :");
+        int f = scanner.nextInt();
+
+        int c = (f - 32) * 5/9;
+        System.out.println("Celsius" + c);
+
+		}
+		else if(temp == 'f'){
+            System.out.println("Enter Manu temperature Celsius :");
+            int c = scanner.nextInt();
+
+        int f = (c * 9 / 5) + 32;
+        System.out.println("Fahrenheit " + f );
+        }
+
+	}
+}
+--------------------------------------------------------
+Question 8: Ticket Booking System
+Design a ticket booking system for a cinema that calculates the ticket price based on the age of the customer. Children (age < 12) get a 50% discount, while seniors (age >= 65) get a 30% discount.
+
+import java.util.*;
+
+public class Ticket_booking
+{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter Ticket Price Number :");
+        int ticketprice = scanner.nextInt();
+
+        System.out.println("Enter age  Number :");
+        int age = scanner.nextInt();
+        int discount;
+        if (age < 12 ){
+             discount=ticketprice*50/100;
+            System.out.println("50% percent discount children : "+discount);
+        }
+        else if (age > 12 && age <= 65 ){
+            System.out.println("not Discount for younger:"+ ticketprice);
+        }
+
+        else if (age >= 65 ){
+             discount=ticketprice*30/100;
+            System.out.println("30% percent discount old person : "+discount);
+        }
+
+        
+    }
+}
+----------------------------------------------------------
+1)
+Problem Statement – Chaman planned to choose a four digit lucky number for his car. His
+lucky numbers are 3,5 and 7. Help him find the number, whose sum is divisible by 3 or 5 or
+7. Provide a valid car number, Fails to provide a valid input then display that number is not a
+valid car number.
+Note : The input other than 4 digit positive number[includes negative and 0] is considered as
+invalid.
+Refer the samples, to read and display the data.
+Sample Input 1:
+Enter the car no:1234
+Sample Output 1:
+Lucky Number
+Sample Input 2:
+Enter the car no:1214
+Sample Output 2:
+Sorry its not my lucky number
+Sample Input 3:
+Enter the car no:14
+Sample Output 3:
+14 is not a valid car number
+
+import java.util.*;
+class Pappu {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter the car number");
+        int car = scn.nextInt();
+        int count = 0;
+        int temp = car;
+        while (temp > 0) {
+            temp = temp / 10;
+            count++;
+        }
+        if (count != 4) {
+            System.out.println("invalid");
+        }
+
+       else if (count == 4) {
+            int rem, sum = 0;
+            while (car > 0) {
+                rem = car % 10;
+                sum = sum + rem;
+                car = car / 10;
+            }
+            if (sum % 3 == 0 || sum % 5 == 0 || sum % 7 == 0) {
+                System.out.println("lucy number");
+            } else {
+                System.out.println("not lucky number");
+            }
+
+        }
+    }
+}
+
+
