@@ -1,0 +1,674 @@
+->heirarichal inheritance : user input 
+
+class A 
+add() :no return and no argument 
+covarintat return type :kuch bhi print kr dena 
+
+class B
+sub(): return and no argument 
+covarintat return type :kuch bhi print kr dena 
+
+class C
+div():no return and  argument 
+covarintat return type :kuch bhi print kr dena 
+
+class Main 
+multi() : return and  argument 
+covarintat return type :kuch bhi print kr dena 
+
+main method :
+import java.util.Scanner;
+
+class A{
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a + b;
+        System.out.println("sum of two number "+c);
+
+    }
+    A show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of name : ");
+        String name = sc.nextLine();
+        System.out.println(name);
+        return this;
+    }
+}
+
+class B extends A{
+   int sub(){
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter the value of a : ");
+       int a = sc.nextInt();
+       System.out.print("Enter the value of b : ");
+       int b = sc.nextInt();
+       int c = a - b;
+       System.out.println("the value of c is");
+       return c ;
+   }
+    B show1(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of name : ");
+        String name1 = sc.nextLine();
+        System.out.println(name1);
+        return this;
+    }
+}
+class C extends A{
+  void div(int a, int b){
+      int c = a / b;
+      System.out.println("Div of two number "+c);
+  }
+    C show2(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of name2 : ");
+        String name2 = sc.nextLine();
+        System.out.println(name2);
+        return this;
+    }
+}
+public class Mohit extends A{
+    int multi(int a, int b){
+        int c = a * b;
+        System.out.println("the value of c is");
+        return c ;
+    }
+    Mohit show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of name3 : ");
+        String name3 = sc.nextLine();
+        System.out.println(name3);
+        return this;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+//
+        Mohit p = new Mohit();
+        System.out.println(p.multi(a,b));
+        p.show3();
+        p.add();
+        p.show();
+
+        B q = new B();
+        System.out.println(q.sub());
+        q.show1();
+
+        C f = new C();
+        f.div(a,b);
+        f.show2();
+
+
+
+    }
+}
+----------------------------------------------------------------
+getter setter 
+
+->heirarichal inheritance : user input 
+
+class A 
+add() :no return and no argument 
+
+class B
+sub(): return and no argument 
+
+
+class C
+div():no return and  argument 
+
+class Main 
+multi() : return and  argument 
+
+main method :
+
+import java.util.Scanner;
+
+class A{
+    private  int a;
+    private int b;
+    void set1(int a, int b){
+        this.a=a;
+        this.b=b;
+    }
+    int get1(){
+        return a;
+    }
+    int get2(){
+        return b;
+    }
+    void add(){
+        int c = a+b;
+        System.out.println("sum of two num : "+c);
+    }
+}
+
+class B extends A{
+    private  int a;
+    private int b;
+    void set2(int a, int b){
+        this.a=a;
+        this.b=b;
+    }
+    int get3(){
+        return a;
+    }
+    int get4(){
+        return b;
+    }
+    void sub(){
+       int c = a - b;
+       System.out.println("sub of two num : "+c);
+   }
+
+}
+class C extends A{
+    private  int a;
+    private int b;
+    void set3(int a, int b){
+        this.a=a;
+        this.b=b;
+    }
+    int get5(){
+        return a;
+    }
+    int get6(){
+        return b;
+    }
+  void div(){
+      int c = a / b;
+      System.out.println("Div of two number "+c);
+  }
+
+}
+public class Mohit extends A{
+    private  int a;
+    private int b;
+    void set4(int a, int b){
+        this.a=a;
+        this.b=b;
+    }
+    int get7(){
+        return a;
+    }
+    int get8(){
+        return b;
+    }
+    void multi(){
+        int c = a * b;
+        System.out.println("multi of two num : "+c);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+//
+        Mohit p = new Mohit();
+       p.set4(a,b);
+       p.multi();
+       p.set1(a,b);
+       p.add();
+
+
+        B q = new B();
+        q.set2(a,b);
+        q.sub();
+
+
+        C f = new C();
+        f.set3(a,b);
+        f.div();
+
+
+    }
+}
+
+----------------------------------------------------------------
+->heirarichal inheritance : user input 
+
+class A 
+add :constructor :default 
+
+class B
+sub:constructor :default 
+
+
+
+class C
+div:constructor :default 
+
+
+class Main 
+multi() :constructor :default 
+
+main method :
+import java.util.Scanner;
+
+class A{
+   A(){
+       Scanner sc = new Scanner(System.in);
+       System.out.print("Enter the value of a : ");
+       int a = sc.nextInt();
+       System.out.print("Enter the value of b : ");
+       int b = sc.nextInt();
+       int c = a + b;
+       System.out.println("sum of two number "+c);
+
+   }
+}
+class B extends A{
+    B(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a - b;
+        System.out.println("sub of two number "+c);
+
+    }
+
+}
+class C extends A{
+    C(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a / b;
+        System.out.println("div of two number "+c);
+
+    }
+}
+public class Mohit extends A{
+    Mohit(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a * b;
+        System.out.println("multi of two number "+c);
+
+    }
+
+    public static void main(String[] args) {
+
+
+        A sc=new Mohit();
+         new C();
+         new B();
+         
+    }
+}
+
+-------------------------------------------
+method overriding : single level inheritance 
+
+class A{
+   void show(){
+       System.out.println("A class");
+   }
+}
+class B extends A{
+    void show(){
+        super.show();
+        System.out.println("B class");
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+      B p = new B ();
+      p.show();
+
+    }
+}
+-------------------------------------------
+method overriding : single level multilevel 
+
+import java.util.Scanner;
+
+class A{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a + b;
+        System.out.println("sum of two num : "+c);
+
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a - b;
+        System.out.println("sub of two num : "+c);
+
+    }
+}
+class C extends B{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a * b;
+        System.out.println("product of two num : "+c);
+
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        C p = new C ();
+        p.show();
+
+    }
+}
+
+-------------------------------------------
+method overriding : single level heiraichal 
+
+import java.util.Scanner;
+
+class A{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a + b;
+        System.out.println("sum of two num : "+c);
+
+    }
+}
+class B extends A{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a - b;
+        System.out.println("sub of two num : "+c);
+
+    }
+}
+class C extends A{
+    void show(){
+        super.show();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a * b;
+        System.out.println("product of two num : "+c);
+
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        C p = new C ();
+        p.show();
+        B q = new B();
+        q.show();
+
+    }
+}
+
+--------------------------------------------
+class A
+	method name same :parameterised 
+
+class B ex A 
+	method name same  :non -parameterised 
+
+error 
+solve krna 
+
+import java.util.Scanner;
+
+class A{
+    public void A(int a, int b){
+        int c = a + b;
+        System.out.println(c);
+    }
+
+}
+class B extends A{
+    B(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        super.A(a, b);
+        System.out.println("B class");
+    }
+
+}
+public class Mohit {
+    public static void main(String[] args) {
+        B p = new B ();
+
+
+    }
+}
+
+
+-------------------------------------------
+class A
+	method name same :non-parameterised 
+
+class B ex A 
+	method name same  :parameterised 
+
+error 
+solve krna 
+
+import java.util.Scanner;
+
+class A{
+    public void A(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a + b;
+        System.out.println("sum of two num : "+c);
+    }
+
+}
+class B extends A{
+    B(int a, int b){
+        super.A();
+        int c = a - b;
+        System.out.println("sub of two num : "+c);
+        
+
+    }
+
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        B p = new B (a,b);
+
+
+    }
+}
+
+-------------------------------------------
+class A
+	method name same :parameterised 
+
+class B ex A 
+	method name same  :parameterised 
+
+error 
+solve krna 
+
+import java.util.Scanner;
+
+class A{
+    public void A(int a, int b){
+        int c = a + b;
+        System.out.println("sum of two num : "+c);
+    }
+
+}
+class B extends A{
+    B(int a, int b){
+        super.A(a,b);
+        int c = a - b;
+        System.out.println("sub of two num : "+c);
+
+
+    }
+
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();
+        B p = new B (a,b);
+
+
+    }
+}
+
+----------------------------------------
+-------------------------------------------
+class A
+	method name same :return and argument 
+
+class B ex A 
+	method name same  :no return and no argument 
+
+error 
+solve krna 
+
+import java.util.Scanner;
+
+class A{
+     public int add(int a, int b){
+        int c = a + b;
+        System.out.println("sum of two num : "+c);
+        return (0);
+    }
+
+}
+class B extends A{
+   void sub(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();;
+        int c = a - b;
+        System.out.println("sub of two num : "+c);
+        super.add(a,b);
+
+    }
+
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();;
+        B p = new B ();
+        p.sub();
+
+
+
+    }
+}
+
+
+-------------------------------------------
+class A
+	method name same :no return and no argument 
+
+class B ex A 
+	method name same  : return and argument 
+
+error 
+solve krna 
+
+import java.util.Scanner;
+
+class A{
+     public void add(){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("enter the value of a : ");
+         int a = sc.nextInt();
+         System.out.print("enter the value of b : ");
+         int b = sc.nextInt();;
+        int c = a + b;
+        System.out.println("sum of two num : "+c);
+
+    }
+
+}
+class B extends A{
+   int sub(int a, int b){
+
+        int c = a - b;
+        System.out.println("sub of two num : "+c);
+        super.add();
+       return (0);
+    }
+
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = sc.nextInt();;
+        B p = new B ();
+        p.sub(a,b);
+
+
+
+    }
+}
+
+
+
+

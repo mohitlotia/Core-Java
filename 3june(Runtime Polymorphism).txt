@@ -1,0 +1,58 @@
+method overloading 
+
+five methods same name 
+addition
+substraction
+multi
+div 
+modu
+
+error
+problem solve 
+--------------------------------------------------
+method overloading 
+
+five methods same name but return type of method will be changed  
+addition
+substraction
+multi
+div 
+modu
+
+error
+problem solve 
+--------------------------------------------------
+method overloading 
+
+five methods same name but return type of parameter will be changed  
+addition
+substraction
+multi
+div 
+modu
+
+error
+problem solve 
+--------------------------------------------------
+constructor overloading :
+
+class A constructor overloading :
+
+
+class B constructor overloading :
+
+
+class C constructor overloading :
+
+class Main :
+
+
+error 
+problem solve 
+--------------------------------------------------
+single level inheritance :parameterised constructor 
+-------------------------
+multi level inheritance :parameterised constructor 
+-------------------------
+heirarichal level inheritance :parameterised constructor 
+-------------------------

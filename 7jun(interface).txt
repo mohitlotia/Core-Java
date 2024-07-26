@@ -1,0 +1,556 @@
+abstract class 
+	method 
+
+Main class 
+access anonymous inner class  
+
+abstract class A{
+    abstract  void show1();
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        A k = new A() {
+            void show1() {
+                System.out.println("What are you doing");
+            }
+        };
+        k.show1();
+
+    }
+}
+----------------------------------------
+abstract class 
+	method1 :no return and no argument  :addition
+	method2 :no return and argument :substraction 
+	method3 :return and no argument :multipliction
+	method4 :return and argument :division 
+
+Main class 
+access :anonymous inner class 
+
+import java.util.*;
+abstract class A{
+    abstract  void show1();
+    abstract  void show2(int a,int b);
+    abstract  int show3();
+    abstract  int show4(int a,int b);
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        A k = new A() {
+            void show1() {
+                int a = 4;
+                int b = 3;
+                int c = a+b;
+                System.out.println("sum of two num : "+c);
+            }
+            void show2(int a,int b){
+                int c = a-b;
+                System.out.println("sub of two num : "+c);
+            }
+            int show3(){
+                int a = 2;
+                int b = 3;
+                int c = a*b;
+                System.out.println("multi of two num : "+c);
+                return c;
+            }
+            int show4(int a,int b){
+                int c = a/b;
+                System.out.println("div of two num : "+c);
+                return c;
+            }
+        };
+        k.show1();
+        k.show2(a,b);
+        System.out.println(k.show3());
+        System.out.println(k.show4(a,b));
+
+
+
+    }
+}
+----------------------------------------
+abstract class A
+	method1 :no return and no argument  :addition
+
+abstract class B
+	method2 :no return and argument :substraction 
+
+abstract class C
+	method3 :return and no argument :multiplication
+
+abstract class D
+	method4 :return and argument :division 
+
+Main class 
+access :anonymous inner class 
+
+import java.util.*;
+abstract class A{
+    abstract  void show1();
+}
+abstract class B{
+    abstract  void show2(int a,int b);
+}
+abstract class C{
+    abstract  int show3();
+}
+abstract class D{
+    abstract  int show4(int a,int b);
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        A k = new A() {
+            void show1() {
+                int a = 4;
+                int b = 3;
+                int c = a+b;
+                System.out.println("sum of two num : "+c);
+            }
+        };
+        k.show1();
+        B q = new B() {
+            void show2(int a,int b){
+                int c = a-b;
+                System.out.println("sub of two num : "+c);
+            }
+        };
+        q.show2(a,b);
+        C f = new C() {
+            int show3(){
+                int a = 2;
+                int b = 3;
+                int c = a*b;
+                System.out.println("multi of two num : "+c);
+                return c;
+            }
+        };
+        System.out.println(f.show3());
+        D h = new D() {
+            int show4(int a,int b){
+                int c = a/b;
+                System.out.println("div of two num : "+c);
+                return c;
+            }
+        };
+        System.out.println(h.show4(a,b));
+
+
+
+    }
+}
+
+----------------------------------------
+interface A
+method :addition :no return and no argument 
+
+class B impl A
+Main class 
+access
+
+import java.util.*;
+interface A{
+    void show ();
+}
+class B implements A {
+    public void show (){
+      int a=20;
+      int b=20;
+      int c = a+b;
+      System.out.println("sum of two num : "+c);
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		
+		B q = new B ();
+		q.show();
+	}
+}
+
+----------------------------------------
+interface A
+method :sub :no return and argument 
+
+class B impl A
+Main class 
+access
+
+import java.util.*;
+interface A{
+    void show(int a,int b);
+}
+class B implements A {
+    public void show(int a,int b){
+        int c = a-b;
+        System.out.println("sub of two num : "+c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        B q = new B ();
+        q.show(a,b);
+    }
+}
+
+----------------------------------------
+interface A
+method :multi : return and no argument 
+
+class B impl A
+Main class 
+access
+
+import java.util.*;
+interface A{
+    int show();
+}
+class B implements A {
+    public int show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("multi of two num : "+c);
+        return c;
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) {
+        B q = new B ();
+        q.show();
+    }
+}
+----------------------------------------
+interface A
+method :div : return and  argument 
+
+class B impl A
+
+Main class 
+access
+
+import java.util.*;
+interface A{
+    int show(int a,int b);
+}
+class B implements A {
+    public int show(int a,int b){
+        int c = a/b;
+        System.out.println("div of two num : "+c);
+        return c;
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        B q = new B ();
+        q.show(a,b);
+    }
+}
+
+----------------------------------------
+interface A
+method :addition :no return and no argument 
+method :addition : return and  argument 
+method :multi : return and no argument 
+method :sub :no return and argument 
+
+class B impl A
+
+Main class 
+access
+
+import java.util.*;
+interface A{
+     void show1();
+      void show2(int a,int b);
+         int show3();
+              int show4(int a,int b);
+}
+class B implements A {
+    public void show1(){
+      int a=20;
+      int b=20;
+      int c = a+b;
+      System.out.println("sum of two num : "+c);
+    }
+      public void show2(int a,int b){
+        int c = a-b;
+        System.out.println("sub of two num : "+c);
+    }
+    public int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("multi of two num : "+c);
+        return c;
+    }
+    public int show4(int a,int b){
+        int c = a/b;
+        System.out.println("div of two num : "+c);
+        return c;
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        B q = new B ();
+        q.show1();
+        q.show2(a,b);
+        q.show3();
+        q.show4(a,b);
+    }
+}
+
+----------------------------------------
+interface A
+method :multi : return and no argument 
+method :sub :no return and argument 
+
+class B impl A
+->getter setter 
+
+Main class 
+access
+
+import java.util.*;
+interface A{
+     int show();
+    void show2(int a,int b);
+}
+class B implements A{
+    private int a;
+    private int b;
+    
+    set1(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    get1(){
+        return a;
+    }
+    get2(){
+        return b;
+    }
+    int show(){
+        int c = a*b;
+        System.out.println("multi two num : "+c);
+        return c;
+    }
+    void show2(int a,int b){
+       int c = a-b;
+        System.out.println("sub of two num : "+c);
+        return c; 
+    }
+   
+}
+public class Main 
+{
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+       B q = new B();
+       q.set1(a,b);
+       System.out.println(q.show());
+       System.outprintln(q.show2(a,b));
+    }
+}
+
+----------------------------------------
+interface A
+method :addition :no return and no argument 
+
+interface B
+method :sub : no return and  argument 
+
+interface C
+method :multi :return and no argument 
+
+interface D
+method :div : return and  argument 
+
+clas E A
+
+class F B
+
+class G C
+
+class H D
+
+Main :access 
+
+import java.util.*;
+interface A{
+     void show1();
+}
+interface B{
+    void show2(int a,int b);
+}
+interface C{
+     int show3();
+}
+interface D{
+     int show4(int a,int b);
+}
+class E implements A {
+    public void show1(){
+      int a=20;
+      int b=20;
+      int c = a+b;
+      System.out.println("sum of two num : "+c);
+    }
+}
+class F implements B{
+     public void show2(int a,int b){
+        int c = a-b;
+        System.out.println("sub of two num : "+c);
+    }
+}
+class G implements C{
+     public int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("multi of two num : "+c);
+        return c;
+    }
+}
+class H implements D{
+     public int show4(int a,int b){
+        int c = a/b;
+        System.out.println("div of two num : "+c);
+        return c;
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        E q = new E();
+        q.show1();
+        F w = new F();
+        w.show2(a,b);
+        G e = new G();
+        System.out.println(e.show3());
+        H y = new H();
+        System.out.println(y.show4(a,b));
+    }
+}
+----------------------------------------
+interface A
+method :addition :no return and no argument 
+
+interface B
+method :addition : no return and  argument 
+
+interface C
+method :sub : return and no argument 
+
+interface D
+method :multi : return and argument 
+
+clas E A B C D 
+
+Main :access 
+
+import java.util.*;
+interface A{
+     void show1();
+}
+interface B{
+    void show2(int a,int b);
+}
+interface C{
+     int show3();
+}
+interface D{
+     int show4(int a,int b);
+}
+class E implements A,B,C,D{
+    public void show1(){
+      int a=20;
+      int b=20;
+      int c = a+b;
+      System.out.println("sum of two num : "+c);
+    }
+     public void show2(int a,int b){
+        int c = a-b;
+        System.out.println("sub of two num : "+c);
+    }
+    public int show3(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        int c = a*b;
+        System.out.println("multi of two num : "+c);
+        return c;
+    }
+      public int show4(int a,int b){
+        int c = a/b;
+        System.out.println("div of two num : "+c);
+        return c;
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a :");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b :");
+        int b = sc.nextInt();
+        E q = new E();
+        q.show1();
+        q.show2(a,b);
+        System.out.println(q.show3());
+        System.out.println(q.show4(a,b));
+    }
+}
+End The----------------------------------------
