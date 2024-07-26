@@ -1,0 +1,374 @@
+single level inheritance 
+
+class A 
+method1 :hello world 
+
+class B 
+method2 :hii how are you 
+
+class Main 
+main method :access 
+
+class A{
+  void  method1(){
+      System.out.println("hello Mohit");
+  }
+}
+class B extends A {
+    void method2(){
+        System.out.println("kese ho mohit");
+    }
+}
+
+public class Mohit {
+    public static void main(String[] args) {
+      B p = new B();
+      p.method2();
+      p.method1();
+
+    }
+}
+
+
+-------------------------------------------
+single level inheritance 
+
+class A 
+add() :no return and no argument 
+sub() :no return and  argument 
+
+class B 
+div() : return and no argument 
+multi() : return and  argument 
+
+class Main 
+main method :access 
+child class k through all methods access 
+
+import java.util.Scanner;
+class A{
+  void  add(){
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter the value of a : ");
+      int a = sc.nextInt();
+      System.out.print("Enter the value of b : ");
+      int b = sc.nextInt();
+
+      int c= a+ b;
+      System.out.println("sum of two number : "+ c);
+  }
+  void sub(int a, int b){
+      int c = a - b;
+      System.out.println("Diffrence of two number : "+ c);
+  }
+}
+class B extends A {
+    int div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+
+        int c= a / b;
+       return c;
+    }
+    int multi(int a,int b){
+        int c= a / b;
+        return c;
+    }
+}
+
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+      B p = new B();
+      p.add();
+      p.sub(a,b);
+        System.out.println(p.div());
+        System.out.println(p.multi(a,b));
+
+    }
+}
+
+--------------------------------------------------------
+single level inheritance 
+
+class A 
+add() :getter and setter
+sub() :getter and setter
+
+class B 
+div() : getter and setter
+multi() : getter and setter
+
+class Main 
+main method :access 
+child class k through all methods access 
+
+import java.util.Scanner;
+class A{
+    private  int a;
+    private int b;
+
+    void set1(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+    // getter method
+    int getA() {
+        return a;
+    }
+    // getter method
+    int getA1() {
+        return b;
+    }
+    void  add(){
+      int c= a + b;
+      System.out.print("sum of two number : "+ c);
+  }
+     void sub(){
+      int c = a - b;
+      System.out.print("Diffrence of two number : "+ c);
+  }
+}
+class B extends A {
+    private int a;
+    private int b;
+
+    void set2(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+    // getter method
+    int getB() {
+        return a;
+    }
+    // getter method
+    int getB1() {
+        return b;
+    }
+    void div(){
+        int c= a / b;
+        System.out.print("divide of two number : "+ c);
+    }
+    void multi(){
+        int c= a * b;
+        System.out.print("product of two number : "+ c);
+    }
+}
+
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+
+      B p = new B();
+      p.set1(a,b);
+       // System.out.println(p.getA());
+       // System.out.println(p.getA1());
+        p.add();
+        System.out.println();
+        p.sub();
+        System.out.println();
+      p.set2(a,b);
+       // System.out.println(p.getB());
+       // System.out.println(p.getB1());
+        p.div();
+        System.out.println();
+        p.multi();
+
+
+
+    }
+}
+
+----------------------------------------------------------
+single level inheritance 
+Student :class  getter and setter
+
+name
+fname
+mname
+class
+year
+address
+number
+bloodgroup 
+
+Employe :class  getter and setter
+
+empname
+id
+empfname
+empmname
+company
+salary 
+
+import java.util.Scanner;
+ class Student1 {
+    private String name;
+    private String papaname;
+    private String mummyname;
+    private int Class;
+    private int year;
+    private String address;
+    private int number;
+    private char bloodgroup;
+
+    void details1(String name, String papaname, String mummyname, int Class, int year, String address, int number, char bloodgroup) {
+        this.name = name;
+        this.papaname = papaname;
+        this.mummyname = mummyname;
+        this.Class = Class;
+        this.year = year;
+        this.address = address;
+        this.number = number;
+        this.bloodgroup = bloodgroup;
+
+    }
+
+    String get1() {
+        return name;
+    }
+
+    String get2() {
+        return papaname;
+    }
+
+    String get3() {
+        return mummyname;
+    }
+
+    int get4() {
+        return Class;
+    }
+
+    int get5() {
+        return year;
+    }
+
+    String get6() {
+        return address;
+    }
+
+    int get7() {
+        return number;
+    }
+
+    char get8() {
+        return bloodgroup;
+    }
+}
+class Employe extends Student1 {
+    private String empname;
+    private int id;
+    private String emppapaname;
+    private String empmummyname;
+    private String company;
+    private int salary;
+
+    void emdetails(String empname, int id, String emppapaname, String empmummyname, String company, int salary) {
+        this.empname = empname;
+        this.id = id;
+        this.emppapaname = emppapaname;
+        this.empmummyname = empmummyname;
+        this.company = company;
+        this.salary = salary;
+    }
+
+    String getA() {
+        return empname;
+    }
+    int getB() {
+        return id;
+    }
+
+    String getC() {
+        return emppapaname;
+    }
+
+    String getD() {
+        return empmummyname;
+    }
+
+    String getE() {
+        return company;
+    }
+
+    int getF() {
+        return salary;
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Student details
+        System.out.print("Enter the Student name : ");
+        String name = sc.nextLine();
+        System.out.print("Enter the Student papaname : ");
+        String papaname = sc.nextLine();
+        System.out.print("Enter the Student mummyname : ");
+        String mummyname = sc.nextLine();
+        System.out.print("Enter the your class : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the year : ");
+        int b = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter your address : ");
+        String address = sc.nextLine();
+        System.out.print("Enter your number ; ");
+        int c = sc.nextInt();
+        System.out.print("Enter your bloodgroup : ");
+        char d = sc.next().charAt(0);
+        sc.nextLine();
+        // Employee details
+        System.out.print("Enter the  empname : ");
+        String Name = sc.nextLine();
+        System.out.print("enter the Id : ");
+        int id = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter the  emppapaname : ");
+        String Papaname = sc.nextLine();
+        System.out.print("Enter the empmummyname : ");
+        String Mummyname = sc.nextLine();
+        System.out.print("enter the company : ");
+        String company = sc.nextLine();
+        System.out.print("Enter your salary : ");
+        int x = sc.nextInt();
+
+
+        Employe p = new Employe();
+        p.details1(name, papaname, mummyname, a, b, address, c, d);
+        p.emdetails(Name,id,Papaname,Mummyname,company,x);
+
+        // Student details
+        System.out.println("Name: " +p.get1());
+        System.out.println("Papa Name: " +p.get2());
+        System.out.println("Mummy Name: " +p.get3());
+        System.out.println("Class: " + p.get4());
+        System.out.println("Year: " + p.get5());
+        System.out.println("Address: " +p.get6());
+        System.out.println("Number: "+ p.get7());
+        System.out.println("Blood Group: " +p.get8());
+
+        // Employee details
+        System.out.println("Employee Name: " + p.getA());
+        System.out.println("Enter your id: " + p.getB());
+        System.out.println("Employee Papa Name: " + p.getC());
+        System.out.println("Employee Mummy Name: " + p.getD());
+        System.out.println("Company: " + p.getE());
+        System.out.println("Salary: " + p.getF());
+
+
+    }
+}
+
+----------------The End

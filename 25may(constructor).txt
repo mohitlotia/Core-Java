@@ -1,0 +1,736 @@
+		DEFAULT CONSTRUCTOR 
+===============================================================
+class Main 
+
+constructor :default constructor 
+
+main method 
+call 
+
+public class Mohit {
+   Mohit (){
+       System.out.println("hello constructor");
+   }
+    public static void main(String[] args) {
+       new Mohit();
+    }
+}
+
+----------------------------------------------------------------------
+class Main 
+
+constructor :default constructor 
+method1 :two number :return and argument 
+method2 :two number :no return and argument 
+
+main method 
+call 
+
+import java.util.Scanner;
+
+public class Mohit {
+   Mohit (){
+       System.out.println("hello constructor");
+   }
+   int show1(int a, int b){
+       int c = a+b;
+       return c;
+   }
+   void show2(int a ,int b ){
+       int c = a-b;
+       System.out.println(c);
+   }
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+
+      Mohit p = new Mohit();
+        System.out.println(p.show1(a,b));
+        p.show2(a,b);
+    }
+}
+
+
+
+----------------------------------------------------------------------
+class A :constructor : two number addition 
+
+class B :constructor : two number substraction 
+
+class C :constructor : two number multiplication 
+
+class D :constructor : two number divi 
+
+class Main 
+constructor :default constructor :modular  
+
+main method 
+call 
+
+import java.util.Scanner;
+class A{
+    A(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c;
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+}
+class B {
+    B () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c;
+        c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+}
+class C {
+    C () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c;
+        c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+}
+class D {
+    D () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c;
+        c = a / b;
+        System.out.println("div of Two numbers :" + c);
+    }
+}
+
+public class Mohit {
+   Mohit (){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the value of a");
+       int a = sc.nextInt();
+       System.out.println("Enter the value of b");
+       int b = sc.nextInt();
+       int c;
+       c = a % b;
+       System.out.println("modular of Two numbers :" + c);
+   }
+    public static void main(String[] args) {
+       new A();
+        new B();
+        new C();
+        new D();
+
+      Mohit p = new Mohit();
+
+    }
+}
+----------------------------------------------------------------------
+class A :constructor : two number addition 
+method1 :div : no return and  argument 
+
+class B :constructor : two number substraction 
+method2 :mod: return and no argument 
+
+class C :constructor : two number multiplication 
+method3 :four number addition :  return and  argument 
+
+class Main 
+method4 : no return and no argument 
+main method 
+call 
+
+import java.util.Scanner;
+class A{
+     A(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+       int c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+    void show1 (int a, int b) {
+       int c = a / b;
+        System.out.println("divide of Two numbers :" + c);
+    }
+
+}
+class B {
+    
+    B () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+    int show2(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c = a % b;
+        return c;
+    }
+}
+class C {
+  
+    C () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+    int show3(int a, int b , int e, int d){
+      int  c=a+b+e+d;
+        return c;
+
+    }
+}
+
+public class Mohit {
+   void show4(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the value of a");
+       int a = sc.nextInt();
+       System.out.println("Enter the value of b");
+       int b = sc.nextInt();
+       int c;
+       c = a % b;
+       System.out.println("modular of Two numbers :" + c);
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value of e");
+        int e = sc.nextInt();
+        System.out.println("Enter the value of d");
+        int d = sc.nextInt();
+      A p = new A();
+      p.show1(a,b);
+       B w = new B();
+        w.show2();
+       C h = new C();
+        System.out.println(h.show3(a,b,e,d));
+      Mohit r = new Mohit();
+      r.show4();
+
+    }
+}
+----------------------------------------------------------------------
+class A :instance variable 
+method1 : addition :no return and no argument 
+
+Main class
+main method access 
+
+import java.util.Scanner;
+class A{
+    int a;
+    int b;
+    void show1(int a, int b){
+         this.a=a;
+        this.b=b;
+       int c = a + b;
+        System.out.println("sum of Two numbers :" + c);
+    }
+
+}
+
+public class Mohit {
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        A p = new A();
+        p.show1(a,b);
+
+    }
+}
+
+
+------------------------------------------------------------------
+class A :constructor :instance variable  two number addition 
+
+class B :method :instance variable two number substraction 
+
+class C :constructor :instance variable two number multiplication 
+
+class D :method :instance variable two number divi 
+
+class Main 
+constructor :default constructor :modular  
+
+main method 
+call 
+
+import java.util.Scanner;
+class A{
+   int a;
+   int b;
+    A(int a,int b){
+       this.a=a;
+       this.b=b;
+       int c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+}
+class B {
+    int a;
+    int b;
+
+    void sub(int a, int b) {
+        this.a=a;
+        this.b=b;
+        int c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+}
+class C {
+    int a;
+    int b;
+    C (int a, int b) {
+       this.a=a;
+       this.b=b;
+       int c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+}
+class D {
+    int a;
+    int b;
+    void div(int a, int b) {
+        this.a=a;
+        this.b=b;
+        int c = a / b;
+        System.out.println("div of Two numbers :" + c);
+    }
+}
+
+public class Mohit {
+    Mohit (){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        int c;
+        c = a % b;
+        System.out.println("modular of Two numbers :" + c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        new A(a,b);
+        B p = new B();
+        p.sub(a,b);
+        new C(a,b);
+        D q = new D();
+        q.div(a,b);
+        Mohit r = new Mohit();
+
+    }
+}
+
+------------------------------------------------------------------
+all datatype default value print krvani through instance variable 
+public class Mohit {
+    int a;
+    Float b;
+    double c;
+    char d;
+    long e;
+    short f;
+    boolean g;
+
+    String nmane;
+    Mohit (){
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(f);
+        System.out.println(g);
+    }
+    public static void main(String[] args) {
+         new Mohit();
+
+    }
+}
+
+--------------------------------------
+		PARAMETERISED CONSTRUCTOR 
+class A :parameterised constructor : two number addition 
+
+class B :parameterised constructor : two number substraction 
+
+class C :parameterised constructor : two number multiplication 
+
+class D :parameterised constructor : two number divi 
+
+class Main 
+constructor :parameterised constructor :modular  
+
+main method 
+call 
+
+import java.util.Scanner;
+class A{
+    A(int a, int b){
+
+        int c;
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+}
+class B {
+    B (int a, int b) {
+
+        int c;
+        c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+}
+class C {
+    C (int a, int b) {
+
+        int c;
+        c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+}
+class D {
+    D (int a, int b) {
+
+        int c;
+        c = a / b;
+        System.out.println("div of Two numbers :" + c);
+    }
+}
+
+public class Mohit {
+    Mohit (int a, int b){
+       int c;
+        c = a % b;
+        System.out.println("modular of Two numbers :" + c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+
+        new A(a,b);
+        new B(a,b);
+        new C(a,b);
+        new D(a,b);
+
+         new Mohit(a,b);
+
+    }
+}
+-----------
+class A :parameterised constructor : two number addition 
+method1 :div : no return and  argument 
+
+class B :parameterised constructor : two number substraction 
+method2 :mod: return and no argument 
+
+class C :parameterised constructor : two number multiplication 
+method3 :four number addition :  return and  argument 
+
+class Main 
+method4 : no return and no argument 
+main method 
+call 
+
+import java.util.Scanner;
+class A{
+    int c;
+    A(int a, int b){
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+    void show1 (int a, int b) {
+        c = a / b;
+        System.out.println("divide of Two numbers :" + c);
+    }
+
+}
+class B {
+    int c;
+    B (int a, int b) {
+        c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+    int show2(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        c = a % b;
+        return c;
+    }
+}
+class C {
+    int c;
+    C (int a, int b) {
+        c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+    int show3(int a, int b , int e, int d){
+        c=a+b+e+d;
+        return c;
+
+    }
+}
+
+public class Mohit {
+   void show4(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the value of a");
+       int a = sc.nextInt();
+       System.out.println("Enter the value of b");
+       int b = sc.nextInt();
+       int c;
+       c = a - b;
+       System.out.println("modular of Two numbers :" + c);
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value of e");
+        int e = sc.nextInt();
+        System.out.println("Enter the value of d");
+        int d = sc.nextInt();
+      A p = new A(a,b);
+      p.show1(a,b);
+       B w = new B(a,b);
+        w.show2();
+       C h = new C(a,b);
+        System.out.println(h.show3(a,b,e,d));
+      Mohit r = new Mohit();
+      r.show4();
+
+    }
+}
+----------------------------------------------------------
+
+class A :parameterised constructor : two number addition 
+method1 :div : no return and  argument 
+
+class B :default constructor : two number substraction 
+method2 :mod: return and no argument 
+
+class C :parameterised constructor : two number multiplication 
+method3 :four number addition :  return and  argument 
+
+class Main 
+method4 : no return and no argument 
+main method 
+call 
+
+import java.util.Scanner;
+class A{
+    int c;
+    A(int a, int b){
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+    void show1 (int a, int b) {
+        c = a / b;
+        System.out.println("divide of Two numbers :" + c);
+    }
+
+}
+class B {
+    int c;
+    B () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+    int show2(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        c = a % b;
+        return c;
+    }
+}
+class C {
+    int c;
+    C (int a, int b) {
+        c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+    int show3(int a, int b , int e, int d){
+        c=a+b+e+d;
+        return c;
+
+    }
+}
+
+public class Mohit {
+   void show4(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Enter the value of a");
+       int a = sc.nextInt();
+       System.out.println("Enter the value of b");
+       int b = sc.nextInt();
+       int c;
+       c = a - b;
+       System.out.println("modular of Two numbers :" + c);
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+        System.out.println("Enter the value of e");
+        int e = sc.nextInt();
+        System.out.println("Enter the value of d");
+        int d = sc.nextInt();
+      A p = new A(a,b);
+      p.show1(a,b);
+       B w = new B();
+        w.show2();
+       C h = new C(a,b);
+        System.out.println(h.show3(a,b,e,d));
+      Mohit r = new Mohit();
+      r.show4();
+
+    }
+}
+
+-------------------------------------------------------------
+user input : 
+class A :parameterised constructor :instance variable  two number addition 
+
+class B :method :instance variable two number substraction 
+
+class C :parameterised constructor :instance variable two number multiplication 
+
+class D :method :instance variable two number divi 
+
+class Main 
+constructor :default constructor :modular  
+
+main method 
+call 
+import java.util.Scanner;
+class A{
+   int a;
+   int b;
+    A(int a, int b){
+        this.a=a;
+        this.b=b;
+       int c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+}
+class B {
+   int a;
+   int b;
+    void sub(int a, int b) {
+        this.a=a;
+        this.b=b;
+        int c = a - b;
+        System.out.println("diffrance of Two numbers :" + c);
+    }
+}
+class C {
+   int a;
+   int b;
+    C (int a,int b) {
+       
+        this.a=a;
+        this.b=b;
+       int c = a * b;
+        System.out.println("product of Two numbers :" + c);
+    }
+}
+class D {
+    int a;
+    int b;
+    void div (int a,int b) {
+
+       this.a=a;
+         this.b=b;
+
+       int c = a / b;
+        System.out.println("div of Two numbers :" + c);
+    }
+}
+
+public class Mohit {
+
+    Mohit (int a, int b){
+
+       int c = a % b;
+        System.out.println("modular of Two numbers :" + c);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b");
+        int b = sc.nextInt();
+
+        new A(a,b);
+       B q = new B();
+       q.sub(a,b);
+
+        new C(a,b);
+        D p = new D();
+        p.div(a,b);
+        new Mohit(a,b);
+
+    }
+}

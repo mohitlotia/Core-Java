@@ -1,0 +1,439 @@
+single level inheritance : 
+
+class A :"A class" (constructor used only default)
+
+class B "B class (constructor used only default)
+
+class Main 
+main method access 
+
+class A {
+     A (){
+         System.out.println("Class A");
+     }
+ }
+class B extends A {
+    B(){
+        System.out.println("Class B");
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        new B();
+
+    }
+}
+------------------------------------------------------
+single level inheritance : user input 
+
+class A 
+	default constructor :two number addition 
+
+class B 
+	default constructor : two number substraction 
+
+
+class Main :
+main method 
+access | call 
+
+import java.util.Scanner;
+ class A {
+     A (){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Enter the value of a : ");
+         int a = sc.nextInt();
+         System.out.print("Enter the value of b : ");
+         int b = sc.nextInt();
+         int c= a+b;
+         System.out.println("sum of two numbers : "+c);
+     }
+ }
+class B extends A {
+    B(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c= a-b;
+        System.out.print("Diffrence of two numbers : "+c);
+
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        new B();
+
+    }
+}
+
+------------------------------------------------------
+single level inheritance :user input  
+
+class A 
+	default constructor :two number multiplication 
+
+class B 
+	default constructor : two number division 
+
+
+class Main :
+main method 
+access | call 
+
+import java.util.Scanner;
+ class A {
+     A (){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Enter the value of a : ");
+         int a = sc.nextInt();
+         System.out.print("Enter the value of b : ");
+         int b = sc.nextInt();
+         int c= a*b;
+         System.out.println("product of two numbers : "+c);
+     }
+ }
+class B extends A {
+    B(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c= a/b;
+        System.out.print("Divide of two numbers : "+c);
+
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        new B();
+
+    }
+}
+------------------------------------------------------
+multilevel inheritance 
+
+class A 
+method1 :no return and no argument :print kuch bhi
+
+class B
+method2 :no return and no argument :print kuch bhi
+
+class C 
+method3 :no return and no argument :print kuch bhi
+
+class Main : 	
+main method :
+
+ class A {
+     void method1 (){
+         System.out.println("kya haal chaal hai tumhare");
+     }
+ }
+class B extends A {
+    void method2 (){
+        System.out.println("kuch nhi parda faltu time wast krne mein");
+    }
+}
+class C extends B{
+    void method3 (){
+        System.out.println("Coding kr");
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        C p = new C();
+        p.method1();
+        p.method2();
+        p.method3();
+
+    }
+}
+
+------------------------------------------------------
+multilevel inheritance : 
+
+class A
+method1 :no return and no argument :addition
+
+class B
+method2 :no return and  argument :substraction
+
+class C
+method3 : return and no argument :multi
+
+class D
+method4 : return and  argument :division
+
+class Main
+covariant return type 
+
+main method :access | call 
+
+import java.util.Scanner;
+ class A {
+     void method1 (){
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Enter the value of a : ");
+         int a = sc.nextInt();
+         System.out.print("Enter the value of b : ");
+         int b = sc.nextInt();
+         int c= a+b;
+         System.out.println("sum of two numbers : "+c);
+
+     }
+ }
+class B extends A {
+    void method2 (int a, int b){
+        int c= a-b;
+        System.out.println("Diffrence of two numbers : "+c);
+    }
+}
+class C extends B{
+    int method3 (){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c= a*b;
+        System.out.println("product of two numbers : "+c);
+        return 0;
+    }
+}
+class D extends C{
+    int method4 (int a, int b){
+        int c= a/b;
+        System.out.println("div of two numbers : "+c);
+        return 0;
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        D p = new D();
+       p.method4(a,b);
+        p.method2(a,b);
+        p.method1();
+        p.method3();
+        
+
+    }
+}
+
+--------------------------------------------------
+multilevel inheritance : 
+
+class A
+method1 :getter setter  :addition
+
+class B
+method2 :getter setter:substraction
+
+class C
+method3 : getter setter :multi
+
+class D
+method4 : getter setter :division
+
+class Main
+main method :access | call 
+
+import java.util.Scanner;
+ class A {
+     // private instance variable
+     private int a;
+     private int b;
+     // setter method
+     void setA(int a, int b) {
+         this.a = a;
+         this.b = b;
+     }
+
+     // getter method
+     int getA() {
+         return a;
+     }
+
+     // getter method
+     int getA1() {
+         return b;
+     }
+
+     // addition number :
+     void add() {
+         int c = a + b;
+         System.out.println("sum of two numbers : "+c);
+     }
+ }
+class B extends A {
+    private int a;
+    private int b;
+    // setter method
+    void setB(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    // getter method
+    int getB() {
+        return a;
+    }
+
+    // getter method
+    int getB1() {
+        return b;
+    }
+
+    // addition number :
+    void sub() {
+        int c = a - b;
+        System.out.println("Diffrence of two numbers : "+c);
+    }
+}
+class C extends B{
+    private int a;
+    private int b;
+    // setter method
+    void setC(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    // getter method
+    int getC() {
+        return a;
+    }
+
+    // getter method
+    int getC1() {
+        return b;
+    }
+
+    // addition number :
+    void multi() {
+        int c = a * b;
+        System.out.println("product of two numbers : "+c);
+    }
+}
+class D extends C{
+    private int a;
+    private int b;
+    // setter method
+    void setD(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    // getter method
+    int getD() {
+        return a;
+    }
+
+    // getter method
+    int getD1() {
+        return b;
+    }
+
+    // addition number :
+    void div() {
+        int c = a / b;
+        System.out.println("div of two numbers : "+c);
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        D p = new D();
+        p.setA(a,b);
+       p.add();
+       p.setB(a,b);
+        p.sub();
+        p.setC(a,b);
+        p.multi();
+        p.setD(a,b);
+        p.div();
+
+    }
+}
+
+---------------------------------------------------
+class A
+method1 :default constructor :addition
+
+class B
+method2 :default constructor:substraction
+
+class C
+method3 : default constructor :multi
+
+class D
+method4 :default constructor :division
+
+class Main
+main method :access | call 
+
+import java.util.Scanner;
+class A {
+    A (){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c= a+b;
+        System.out.println("sum of two numbers : "+c);
+    }
+}
+class B extends A {
+    B(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c= a-b;
+        System.out.println("Diffrence of two numbers : "+c);
+
+    }
+}
+class C extends B {
+    C() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a * b;
+        System.out.println("product of two numbers : " + c);
+    }
+}
+class D extends C{
+    D() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
+        int c = a / b;
+        System.out.println("div of two numbers : " + c);
+    }
+}
+public class Mohit {
+    public static void main(String[] args) {
+        new D ();
+
+    }
+}
+
+The End-------------------------------------------------------------

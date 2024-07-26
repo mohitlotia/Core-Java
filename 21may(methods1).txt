@@ -1,0 +1,370 @@
+1)
+class A 
+even even method call ho (1--->100 even number)
+odd odd method call (check odd number ) 
+palindrome (palindrome)
+reverse (check reverse) 
+Armstrong (Armstrong)
+add (two number addition )
+sub (two number substraction)
+multi (two number multiply )
+
+class Main 
+main() :access 
+
+import java.util.Scanner;
+
+class A {
+    void even(int a){
+        for(int i = a; i<=100; i++){
+            if(i%2==0){
+                System.out.println(i);
+            }
+        }
+
+    }
+    void odd(int a){
+        for(int i = a; i<=100; i++){
+            if(i%2==1){
+                System.out.println(i);
+            }
+        }
+
+    }
+    void palindrome(int a){
+        int temp =a,rem, sum=0;
+        while(a>0){
+            rem = a%10;
+            sum = sum*10+rem;
+            a = a/10;
+
+        }if(sum==temp){
+            System.out.println("palindrome");
+        }else{
+            System.out.println("not palindrome");
+        }
+
+    }
+    void reverse(int a){
+        int temp =a, rem,sum=0;
+        while(a>0){
+            rem = a%10;
+            sum = sum*10+rem;
+            a = a/10;
+
+        }if(sum==temp){
+            System.out.println("reverse");
+        }else{
+            System.out.println("not reverse");
+        }
+
+    }
+    void armstrong(int a){
+        int temp =a, rem, sum=0;
+        while(a>0){
+            rem = a%10;
+            sum = sum+rem*rem*rem;
+            a = a/10;
+
+        }if(sum==temp){
+            System.out.println("armstrong");
+        }else{
+            System.out.println("not armstrong");
+        }
+
+    }
+    void add(int a, int b) {
+        int c = a + b;
+        System.out.println(c);
+    }
+    void sub(int a, int b) {
+        int c = a - b;
+        System.out.println(c);
+    }
+    void multi(int a, int b) {
+        int c=a*b;
+        System.out.println(c);
+    }
+
+}
+
+public class Methods {
+    Methods show( int a){
+        System.out.println(a);
+        return this;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("choose 'even,'odd','palindrome','reverse','armstrong','add','sub,'multi'");
+        String name = sc.nextLine();
+        A p = new A();
+        if(name.equals("even")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            p.even(a);
+           
+        }
+        else if(name.equals("odd")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            p.odd(a);
+
+        }
+        else if(name.equals("palindrome")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            p.palindrome(a);
+        }
+        else if(name.equals("reverse")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            p.reverse(a);
+        }
+        else if(name.equals("armstrong")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            p.armstrong(a);
+        }
+        else if(name.equals("add")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            System.out.println("enter the value of b");
+            int b = sc.nextInt();
+            p.add(a,b);
+
+        }
+        else if(name.equals("sub")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            System.out.println("enter the value of b");
+            int b = sc.nextInt();
+            p.sub(a,b);
+
+        }
+        else if(name.equals("multi")){
+            System.out.println("enter the value of a");
+            int a = sc.nextInt();
+            System.out.println("enter the value of b");
+            int b = sc.nextInt();
+            p.multi(a,b);
+
+        }
+
+    }
+}
+
+
+--------------------------------------------------------------------------
+
+2)no return and argument : 
+class Main :
+add() :two number addition
+sub() :two number subs
+div() :two number div
+multi() :two number multiplication
+mod() :two number modular 
+
+main() :
+all method call 
+
+import java.util.Scanner;
+
+public  class Methods {
+    void add(int a, int b){
+        int c;
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+    void sub(int a, int b){
+        int c;
+        c = a-b;
+        System.out.println("diffrance of Two numbers :"+c);
+    }
+    void div(int a, int b){
+        int c;
+        c = a/b;
+        System.out.println("divide of Two numbers :"+c);
+    }
+    void mod(int a, int b){
+
+        int c;
+        c = a%b;
+        System.out.println("modular of Two numbers :"+c);
+    }
+    void multi(int a, int b){
+
+        int c;
+        c = a*b;
+
+        System.out.println("product of Two numbers :"+c);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = scanner.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = scanner.nextInt();
+        Methods p = new Methods();
+        p.add(a,b);
+        p.sub(a,b);
+        p.div(a,b);
+        p.mod(a,b);
+        p.multi(a,b);
+
+    }
+}
+------------------------------------------------------------- 
+3)no return and argument : 
+class A :
+add() :two number addition
+sub() :two number subs
+div() :two number div
+multi() :two number multiplication
+mod() :two number modular 
+
+class Main :
+main() :
+all method call 
+
+import java.util.Scanner;
+
+class A{
+    void add(int a, int b){
+
+                int c;
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+    void sub(int a, int b){
+       
+        int c;
+        c = a-b;
+        System.out.println("diffrance of Two numbers :"+c);
+    }
+    void div(int a ,int b){
+      
+        int c;
+        c = a/b;
+        System.out.println("divide of Two numbers :"+c);
+    }
+    void mod(int a, int b){
+        
+        int c;
+        c = a%b;
+        System.out.println("modular of Two numbers :"+c);
+    }
+    void multi(int a, int b){
+               int c;
+        c = a*b;
+
+        System.out.println("product of Two numbers :"+c);
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+          System.out.print("enter the value of a : ");
+        int a = scanner.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = scanner.nextInt();
+
+       A p = new A ();
+       p.add(a,b);
+        p.sub(a,b);
+        p.div(a,b);
+        p.mod(a,b);
+        p.multi(a,b);
+
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------------------------
+5)
+ 
+class A :no return and argument 
+add() :two number addition
+
+class B:no return and no argument 
+sub() :two number subs
+
+class C:no return and argument 
+div() :two number div
+
+class D:no return and no argument 
+multi() :two number multiplication
+
+class E: no return and argument 
+mod() :two number modular 
+
+class Main :
+main() :
+all method call 
+
+import java.util.Scanner;
+
+class A{
+    void add(int a, int b){
+
+           int c;
+        c = a+b;
+        System.out.println("sum of Two numbers :"+c);
+    }
+}
+    class B {
+        void sub(int a, int b) {
+               int c;
+            c = a - b;
+            System.out.println("diffrance of Two numbers :" + c);
+        }
+    }
+    class C {
+        void div(int a ,int b) {
+              int c;
+            c = a / b;
+            System.out.println("divide of Two numbers :" + c);
+        }
+    }
+    class D {
+        void mod(int a, int b) {
+                  int c;
+            c = a % b;
+            System.out.println("modular of Two numbers :" + c);
+        }
+    }
+    class E{
+    void multi(int a, int b){
+                int c;
+        c = a*b;
+
+        System.out.println("product of Two numbers :"+c);
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+              Scanner scanner = new Scanner(System.in);
+        System.out.print("enter the value of a : ");
+        int a = scanner.nextInt();
+        System.out.print("enter the value of b : ");
+        int b = scanner.nextInt();
+
+       A p = new A ();
+        B q = new B ();
+        C r = new C ();
+        D s = new D ();
+        E t = new E ();
+
+        
+       p.add(a,b);
+        q.sub(a,b);
+        r.div(a,b);
+        s.mod(a,b);
+        t.multi(a,b);
+
+    }
+}
